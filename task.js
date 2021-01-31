@@ -3,7 +3,7 @@ const closeModal = document.getElementsByClassName('modal__close')[0];
 
 function showModal() {
     let statusModal = getCookie('modalActive');
-    if (statusModal === 'false') {
+    if (statusModal === 'false' || typeof statusModal === 'undefined') {
         modal.classList.add('modal_active');
     }
 }
