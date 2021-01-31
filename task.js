@@ -2,24 +2,15 @@ const modal = document.getElementById('subscribe-modal');
 const closeModal = document.getElementsByClassName('modal__close')[0];
 
 function showModal() {
-    try {
-        let statusModal = getCookie('modalActive');
-        if (statusModal === 'false') {
-            modal.classList.add('modal_active');
-        }
-    } catch (error) {
+    let statusModal = getCookie('modalActive');
+    if (statusModal === 'false') {
         modal.classList.add('modal_active');
     }
-
-
-
-
 }
 
 function modalClose() {
     modal.classList.remove('modal_active');
     document.cookie = 'modalActive=True';
-
 }
 
 const getCookie = (name) => {
